@@ -1,15 +1,2 @@
-# Ignore all data files
-data/enwiktionary-latest-*
-
-# Specifically ignore the large XML file and its directory
-data/enwiktionary-latest-pages-articles.xml/
-data/enwiktionary-latest-pages-articles.xml
-
-# Ignore all compressed files
-*.bz2
-*.gz
-*.7z
-*.zip
-
-# But do not ignore the sample file
-!data/sample-2000-lines.xml
+# Ignore the Wiktionary XML dump
+/data/enwiktionary-latest-pages-articles.xml/enwiktionary-latest-pages-articles.xml
