@@ -35,8 +35,12 @@ npm run dev
 Access the application at http://localhost:3000
 
 File Structure
-CopyC:\Users\benau\wiktionary-db\
+C:\Users\benau\wiktionary-db\
 ├── .gitignore                    # Git ignore rules for large data files
+├── data\                         # Data directory
+│   ├── enwiktionary-latest-pages-articles.xml\  # Extraction directory
+│   │   └── enwiktionary-latest-pages-articles.xml  # Main Wiktionary XML data (~10GB)
+│   └── sample-2000-lines.xml     # Sample file with 2000 lines of XML for analysis
 ├── scripts\
 │   ├── download-data.ps1         # PowerShell script to download Wiktionary files
 │   ├── extract-files.js          # Extracts compressed data files
