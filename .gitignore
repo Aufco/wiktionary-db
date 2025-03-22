@@ -1,0 +1,16 @@
+# Add these lines to your .gitignore file
+Add-Content -Path ".gitignore" -Value @"
+# Ignore all data files
+data/enwiktionary-latest-*
+data/sample-*.xml
+
+# Specifically ignore the large XML file and its directory
+data/enwiktionary-latest-pages-articles.xml/
+data/enwiktionary-latest-pages-articles.xml
+
+# Ignore all compressed files
+*.bz2
+*.gz
+*.7z
+*.zip
+"@
