@@ -1,10 +1,4 @@
-﻿# Create Docker directory structure
-New-Item -Path "C:\Users\benau\wiktionary-db\docker" -ItemType Directory -Force
-New-Item -Path "C:\Users\benau\wiktionary-db\docker\mediawiki" -ItemType Directory -Force
-
-# Create docker-compose.yml
-@"
-version: '3'
+﻿version: '3'
 
 services:
   mediawiki:
@@ -39,4 +33,3 @@ volumes:
   mediawiki_data:
   template_cache:
   db_data:
-"@ | Out-File -FilePath "C:\Users\benau\wiktionary-db\docker\docker-compose.yml" -Encoding utf8
