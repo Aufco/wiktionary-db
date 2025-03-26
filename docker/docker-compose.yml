@@ -1,0 +1,42 @@
+﻿# Create Docker directory structure
+New-Item -Path "C:\Users\benau\wiktionary-db\docker" -ItemType Directory -Force
+New-Item -Path "C:\Users\benau\wiktionary-db\docker\mediawiki" -ItemType Directory -Force
+
+# Create docker-compose.yml
+@"
+version: '3'
+
+services:
+  mediawiki:
+    image: mediawiki:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
+      - mediawiki_data:/var/www/html/data
+      - template_cache:/var/www/html/cache
+    environment:
+      - MW_ADMIN_NAME=admin
+      - MW_ADMIN_PASS=admin123
+      - MW_DB_SERVER=db
+      - MW_DB_NAME=wiki_db
+      - MW_DB_USER=wikiuser
+      - MW_DB_PASS=wikipass
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    environment:
+      - MYSQL_DATABASE=wiki_db
+      - MYSQL_USER=wikiuser
+      - MYSQL_PASSWORD=wikipass
+      - MYSQL_ROOT_PASSWORD=root123
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  mediawiki_data:
+  template_cache:
+  db_data:
+"@ | Out-File -FilePath "C:\Users\benau\wiktionary-db\docker\docker-compose.yml" -Encoding utf8

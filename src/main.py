@@ -1,190 +1,79 @@
-# src/main.py
+﻿#!/usr/bin/env python3
 import argparse
 import logging
-import os
 import sys
-import time
-from pathlib import Path
-
-from .db import DatabaseManager
-from .processor import DefinitionProcessor
-from .downloader import TemplateDownloader
-from .parser import WikitionaryParser
-from .lua_engine import LuaEngine
-from .reporter import Reporter
-
-def setup_logging():
-    """Set up logging configuration."""
-    log_dir = Path("logs")
-    log_dir.mkdir(exist_ok=True)
-    
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        handlers=[
-            logging.FileHandler(log_dir / "processing.log"),
-            logging.StreamHandler(sys.stdout)
-        ]
-    )
+import os
+from database import Database
+from wiki_processor import WikiProcessor
+from template_manager import TemplateManager
+from logger import setup_logger
 
 def main():
-    """Main entry point for the Wiktionary definition processor."""
-    parser = argparse.ArgumentParser(description="Process Wiktionary definitions.")
-    parser.add_argument(
-        "--limit", 
-        type=int, 
-        default=None, 
-        help="Limit the number of definitions to process (for testing)"
-    )
-    parser.add_argument(
-        "--reset", 
-        action="store_true", 
-        help="Reset all processed_definition_text to NULL before processing"
-    )
-    parser.add_argument(
-        "--batch-size",
-        type=int,
-        default=100,
-        help="Number of definitions to process in each batch"
-    )
-    parser.add_argument(
-        "--retry-interval",
-        type=int,
-        default=1000,
-        help="Number of definitions to process before retrying pending definitions"
-    )
+    parser = argparse.ArgumentParser(description='Wiktionary Definition Processor')
+    parser.add_argument('--test', action='store_true', help='Run in test mode with limited processing')
+    parser.add_argument('--limit', type=int, default=100, help='Limit number of entries to process in test mode')
     args = parser.parse_args()
     
-    setup_logging()
-    logger = logging.getLogger(__name__)
-    logger.info("Starting Wiktionary definition processor")
+    # Set up logging
+    logger = setup_logger('wiktionary_processor', 'logs/processing.log')
+    logger.info('Starting Wiktionary Definition Processor')
     
-    # Initialize components
-    db_path = Path("data/wiktionary1.db")
-    templates_dir = Path("templates")
-    modules_dir = Path("modules")
-    reports_dir = Path("reports")
+    # Connect to the database
+    db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'wiktionary1.db')
+    db = Database(db_path)
+    logger.info(f'Connected to database: {db_path}')
     
-    for directory in [templates_dir, modules_dir, reports_dir]:
-        directory.mkdir(exist_ok=True)
+    # Initialize the template manager
+    template_manager = TemplateManager('cache')
     
-    downloader = TemplateDownloader(templates_dir, modules_dir)
-    lua_engine = LuaEngine(modules_dir, templates_dir)
-    parser = WikitionaryParser(downloader, lua_engine)
-    processor = DefinitionProcessor(downloader, parser, lua_engine)
-    db_manager = DatabaseManager(db_path)
-    reporter = Reporter(reports_dir)
+    # Initialize the wiki processor
+    wiki_processor = WikiProcessor('http://localhost:8080/api.php', template_manager)
     
-    # Reset processed definitions if requested
-    if args.reset:
-        logger.info("Resetting all processed definitions")
-        db_manager.reset_processed_definitions()
+    # Reset all processed definition text to NULL
+    db.reset_processed_definitions()
+    logger.info('Reset all processed definition text fields to NULL')
     
     # Process definitions
-    logger.info(f"Processing definitions (limit: {args.limit if args.limit else 'none'})")
-    total_processed = 0
-    last_retry = 0
+    process_definitions(db, wiki_processor, logger, test_mode=args.test, limit=args.limit)
     
-    try:
-        while True:
-            current_limit = min(args.batch_size, args.limit - total_processed if args.limit else args.batch_size)
-            if current_limit <= 0:
-                break
-                
-            definitions = db_manager.get_unprocessed_definitions(limit=current_limit)
-            
-            if not definitions:
-                logger.info("No more unprocessed definitions")
-                break
-            
-            for definition in definitions:
-                word_id = definition["word_id"]
-                word = definition["word"]
-                raw_text = definition["raw_definition_text"]
-                definition_id = definition["id"]
-                
-                processed_text = processor.process_definition(word, raw_text)
-                
-                if processed_text:
-                    db_manager.update_processed_definition(definition_id, processed_text)
-                
-                total_processed += 1
-                
-                if total_processed % 100 == 0:
-                    logger.info(f"Processed {total_processed} definitions")
-                
-                # Check if it's time to retry pending definitions
-                if total_processed - last_retry >= args.retry_interval and processor.pending_definitions:
-                    logger.info(f"Retrying pending definitions after processing {total_processed} definitions")
-                    success_count, still_pending = processor.retry_pending_definitions()
-                    last_retry = total_processed
-                    
-                    # Update the successfully processed definitions in the database
-                    for def_key, def_info in list(processor.pending_definitions.items()):
-                        if def_key not in processor.pending_definitions:  # It was successful
-                            db_manager.update_processed_definition_by_word(
-                                def_info["word"], 
-                                def_info["raw_text"],
-                                processor.parser.parse(def_info["raw_text"])
-                            )
-                
-                if args.limit and total_processed >= args.limit:
-                    break
-            
-            if args.limit and total_processed >= args.limit:
-                break
-        
-        # Final retry for any remaining pending definitions
-        if processor.pending_definitions:
-            logger.info("Final retry for remaining pending definitions")
-            success_count, still_pending = processor.retry_pending_definitions()
-            
-            # Update the successfully processed definitions in the database
-            for def_key, def_info in list(processor.pending_definitions.items()):
-                if def_key not in processor.pending_definitions:  # It was successful
-                    db_manager.update_processed_definition_by_word(
-                        def_info["word"], 
-                        def_info["raw_text"],
-                        processor.parser.parse(def_info["raw_text"])
-                    )
-        
-        logger.info(f"Total definitions processed: {total_processed}")
-        
-        # Generate report
-        logger.info("Generating report")
-        processor_stats = processor.get_statistics()
-        downloader_stats = downloader.get_statistics()
-        reporter.generate_report({**processor_stats, **downloader_stats})
-        
-        logger.info("Processing completed")
+    logger.info('Processing complete')
+
+def process_definitions(db, wiki_processor, logger, test_mode=False, limit=100):
+    """Process all definitions in the database"""
+    total_definitions = db.get_total_definitions_count()
+    logger.info(f'Found {total_definitions} definitions to process')
     
-    except KeyboardInterrupt:
-        logger.info("Processing interrupted by user")
-        
-        # Generate report with current statistics
-        logger.info("Generating report with current statistics")
-        processor_stats = processor.get_statistics()
-        downloader_stats = downloader.get_statistics()
-        reporter.generate_report({
-            **processor_stats, 
-            **downloader_stats,
-            "interrupted": True,
-            "total_processed": total_processed
-        })
+    if test_mode:
+        logger.info(f'Running in test mode. Processing only {limit} definitions')
+        definitions = db.get_definitions(limit=limit)
+    else:
+        definitions = db.get_definitions()
     
-    except Exception as e:
-        logger.error(f"Error in main processing loop: {str(e)}")
+    processed_count = 0
+    error_count = 0
+    
+    for definition in definitions:
+        definition_id, word_id, raw_text = definition
+        logger.debug(f'Processing definition ID {definition_id}')
         
-        # Generate report with current statistics
-        logger.info("Generating report with current statistics")
-        processor_stats = processor.get_statistics()
-        downloader_stats = downloader.get_statistics()
-        reporter.generate_report({
-            **processor_stats, 
-            **downloader_stats,
-            "error": str(e),
-            "total_processed": total_processed
-        })
+        try:
+            # Process the definition
+            processed_text = wiki_processor.process_definition(raw_text)
+            
+            # Store the processed result
+            db.update_processed_definition(definition_id, processed_text)
+            
+            processed_count += 1
+            if processed_count % 100 == 0:
+                logger.info(f'Processed {processed_count}/{total_definitions} definitions')
+                
+        except Exception as e:
+            logger.error(f'Error processing definition ID {definition_id}: {str(e)}')
+            error_count += 1
+    
+    logger.info(f'Processing complete. Processed {processed_count} definitions. Errors: {error_count}')
+    # Generate summary report
+    wiki_processor.template_manager.generate_summary_report()
 
 if __name__ == "__main__":
     main()

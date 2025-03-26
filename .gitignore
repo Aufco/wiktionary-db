@@ -1,16 +1,2 @@
 ﻿# Exclude data directory
 /data/
-
-# Log files
-*.log
-
-# Downloaded templates and modules
-/templates/
-/modules/
-
-# Python cache files
-__pycache__/
-*.py[cod]
-*.class
-*.so
-.Python
