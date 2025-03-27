@@ -37,7 +37,7 @@ Run the system with a single command:
 For testing with a limited number of entries:
 
 ```powershell
-.\run.ps1 --test --limit 10
+.\run.ps1 -test -limit 10
 ```
 
 ## Project Description

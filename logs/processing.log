@@ -1,0 +1,120 @@
+2025-03-26 18:31:30,366 - wiktionary_processor - INFO - Starting Wiktionary Definition Processor
+2025-03-26 18:31:30,443 - wiktionary_processor - INFO - Connected to database: C:\Users\benau\wiktionary-db\src\..\data\wiktionary1.db
+2025-03-26 18:31:32,749 - wiktionary_processor - INFO - Reset 1111508 processed definition entries
+2025-03-26 18:31:32,750 - wiktionary_processor - INFO - Reset all processed definition text fields to NULL
+2025-03-26 18:31:32,974 - wiktionary_processor - INFO - Found 1111508 definitions to process
+2025-03-26 18:31:32,975 - wiktionary_processor - INFO - Running in test mode. Processing only 10 definitions
+2025-03-26 18:31:33,000 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,014 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,034 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,050 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,064 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,075 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,086 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,096 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,107 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,142 - wiktionary_processor - ERROR - API request error: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2025-03-26 18:31:33,147 - wiktionary_processor - INFO - Processing complete. Processed 10 definitions. Errors: 0
+2025-03-26 18:31:33,148 - wiktionary_processor - INFO - Generated download report: cache\download_report.json
+2025-03-26 18:31:33,148 - wiktionary_processor - INFO - Total items downloaded: 0, failed: 0
+2025-03-26 18:31:33,148 - wiktionary_processor - INFO - Processing complete
+2025-03-26 18:37:41,314 - wiktionary_processor - INFO - Starting Wiktionary Definition Processor
+2025-03-26 18:37:41,315 - wiktionary_processor - INFO - Connected to database: C:\Users\benau\wiktionary-db\src\..\data\wiktionary1.db
+2025-03-26 18:37:43,665 - wiktionary_processor - INFO - Reset 1111508 processed definition entries
+2025-03-26 18:37:43,666 - wiktionary_processor - INFO - Reset all processed definition text fields to NULL
+2025-03-26 18:37:43,882 - wiktionary_processor - INFO - Found 1111508 definitions to process
+2025-03-26 18:37:43,883 - wiktionary_processor - INFO - Running in test mode. Processing only 10 definitions
+2025-03-26 18:37:43,903 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,916 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,928 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,939 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,950 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,961 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,971 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,981 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:43,991 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:44,001 - wiktionary_processor - ERROR - Processing error: Expecting value: line 1 column 1 (char 0)
+2025-03-26 18:37:44,006 - wiktionary_processor - INFO - Processing complete. Processed 10 definitions. Errors: 0
+2025-03-26 18:37:44,007 - wiktionary_processor - INFO - Generated download report: cache\download_report.json
+2025-03-26 18:37:44,007 - wiktionary_processor - INFO - Total items downloaded: 0, failed: 0
+2025-03-26 18:37:44,007 - wiktionary_processor - INFO - Processing complete
+2025-03-27 03:26:58,277 - wiktionary_processor - INFO - Starting Wiktionary Definition Processor
+2025-03-27 03:26:58,277 - wiktionary_processor - INFO - Connected to database: C:\Users\benau\wiktionary-db\src\..\data\wiktionary1.db
+2025-03-27 03:26:58,804 - wiktionary_processor - INFO - Reset 1111508 processed definition entries
+2025-03-27 03:26:58,805 - wiktionary_processor - INFO - Reset all processed definition text fields to NULL
+2025-03-27 03:26:58,823 - wiktionary_processor - INFO - Found 1111508 definitions to process
+2025-03-27 03:26:58,824 - wiktionary_processor - INFO - Running in test mode. Processing only 10 definitions
+2025-03-27 03:26:58,844 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,856 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,869 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,899 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,912 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,922 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,932 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,958 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,969 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,980 - wiktionary_processor - ERROR - All JSON parsing attempts failed. Error: Expecting value: line 1 column 1 (char 0)
+2025-03-27 03:26:58,984 - wiktionary_processor - INFO - Processing complete. Processed 10 definitions. Errors: 0
+2025-03-27 03:26:58,985 - wiktionary_processor - INFO - Generated download report: cache\download_report.json
+2025-03-27 03:26:58,985 - wiktionary_processor - INFO - Total items downloaded: 0, failed: 0
+2025-03-27 03:26:58,986 - wiktionary_processor - INFO - Processing complete
+2025-03-27 03:28:35,231 - wiktionary_processor - INFO - Starting Wiktionary Definition Processor
+2025-03-27 03:28:35,231 - wiktionary_processor - INFO - Connected to database: C:\Users\benau\wiktionary-db\src\..\data\wiktionary1.db
+2025-03-27 03:28:35,623 - wiktionary_processor - INFO - Reset 1111508 processed definition entries
+2025-03-27 03:28:35,624 - wiktionary_processor - INFO - Reset all processed definition text fields to NULL
+2025-03-27 03:28:35,641 - wiktionary_processor - INFO - Found 1111508 definitions to process
+2025-03-27 03:28:35,641 - wiktionary_processor - INFO - Running in test mode. Processing only 10 definitions
+2025-03-27 03:28:35,642 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,643 - wiktionary_processor - INFO - Input wikitext: <div>{{senseid|en|Q23622}} A [[reference work]] with a list of [[word]]s from one or more languages, normally ordered [[alphabetical]]ly, explaining each word's [[meaning#Noun|meanings]] ({{l|en|sense|id=any particular meaning of a word|senses}}), and sometimes also containing information on its [[etymology#Noun|etymology]], [[pronunciation#Noun|pronunciation]], {{l|en|usage|id=language}}, [[Wiktionary:Semantic relations|semantic relations]], and [[translation#Noun|translations]], as well as other data.</div>
+2025-03-27 03:28:35,657 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,658 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '775fc63689903b99c7f08f99', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,659 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [775fc63689903b99c7f08f99] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,663 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,663 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|preceded by {{m|en|the}}}} A [[synchronic]] dictionary of a standardised language held to only contain words that are properly part of the language.</div>
+2025-03-27 03:28:35,670 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,671 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '98ed25d265a486ddc3eb5338', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,671 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [98ed25d265a486ddc3eb5338] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,675 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,675 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|by extension}} Any work that has a [[list]] of [[material]] organized alphabetically; e.g., [[biographic]]al dictionary, [[encyclopedic]] dictionary.</div>
+2025-03-27 03:28:35,682 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,683 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '7bdd3461456e7bbbb48dd8df', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,683 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [7bdd3461456e7bbbb48dd8df] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,687 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,688 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|computing}} An [[associative array]], a data structure where each value is referenced by a particular key, analogous to words and definitions in a dictionary (sense 1).</div>
+2025-03-27 03:28:35,695 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,695 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': 'bc4dc1e22e5f2f679b268681', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,696 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [bc4dc1e22e5f2f679b268681] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,700 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,701 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|transitive}} To [[look up]] in a dictionary.</div>
+2025-03-27 03:28:35,731 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,732 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': 'a92f86879f3c1221bd356be3', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,733 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [a92f86879f3c1221bd356be3] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,739 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,739 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|transitive}} To [[add]] to a dictionary.</div>
+2025-03-27 03:28:35,746 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,746 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '3cac8d52ebcbb093633a16e8', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,746 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [3cac8d52ebcbb093633a16e8] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,751 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,751 - wiktionary_processor - INFO - Input wikitext: <div>{{lb|en|intransitive|rare}} To [[compile]] a dictionary.</div>
+2025-03-27 03:28:35,758 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,759 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '31bb652e9d1d41e26264e11e', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,759 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [31bb652e9d1d41e26264e11e] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,763 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,763 - wiktionary_processor - INFO - Input wikitext: <div>{{senseid|en|unconstrained, socially}} {{lb|en|social}} [[unconstrained|Unconstrained]].</div>
+2025-03-27 03:28:35,769 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,770 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '90cf4e0d96f74ef0cb82b655', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,770 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [90cf4e0d96f74ef0cb82b655] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,774 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,774 - wiktionary_processor - INFO - Input wikitext: <div>{{senseid|en|not imprisoned or enslaved}} Not [[imprisoned]] or [[enslaved]].</div>
+2025-03-27 03:28:35,781 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,781 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '1846c26e94841a4008ee909f', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,781 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [1846c26e94841a4008ee909f] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,785 - wiktionary_processor - INFO - Sending request to MediaWiki API at: http://localhost:8080/api.php
+2025-03-27 03:28:35,785 - wiktionary_processor - INFO - Input wikitext: <div>{{senseid|en|generous, liberal}} [[generous|Generous]]; [[liberal]].</div>
+2025-03-27 03:28:35,810 - wiktionary_processor - INFO - Response status code: 200
+2025-03-27 03:28:35,810 - wiktionary_processor - INFO - Response headers: {'Date': 'Thu, 27 Mar 2025 07:28:35 GMT', 'Server': 'Apache/2.4.62 (Debian)', 'X-Powered-By': 'PHP/8.1.32', 'X-Content-Type-Options': 'nosniff', 'X-Request-Id': '57ab7d8ddcf6309b25fc8688', 'Content-Length': '344', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'}
+2025-03-27 03:28:35,810 - wiktionary_processor - INFO - Raw response content (first 200 chars): b'\xef\xbb\xbfMediaWiki internal error.<br />\n<br />\nOriginal exception: [57ab7d8ddcf6309b25fc8688] 2025-03-27 07:28:35: Fatal exception of type &quot;FatalError&quot;<br />\n<br />\nException caught inside except'
+2025-03-27 03:28:35,814 - wiktionary_processor - INFO - Processing complete. Processed 10 definitions. Errors: 0
+2025-03-27 03:28:35,815 - wiktionary_processor - INFO - Generated download report: cache\download_report.json
+2025-03-27 03:28:35,815 - wiktionary_processor - INFO - Total items downloaded: 0, failed: 0
+2025-03-27 03:28:35,815 - wiktionary_processor - INFO - Processing complete

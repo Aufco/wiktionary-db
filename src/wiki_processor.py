@@ -2,6 +2,7 @@
 import logging
 import re
 import time
+import json
 from urllib.parse import quote
 
 class WikiProcessor:
@@ -49,6 +50,10 @@ class WikiProcessor:
             # Wrap it in a div to ensure proper parsing
             wikitext = f"<div>{raw_text}</div>"
             
+            # Print diagnostic info
+            self.logger.info(f"Sending request to MediaWiki API at: {self.api_url}")
+            self.logger.info(f"Input wikitext: {wikitext}")
+            
             # Make API request to parse the wikitext
             response = requests.post(
                 self.api_url,
@@ -62,8 +67,34 @@ class WikiProcessor:
                 timeout=30
             )
             
+            # Log response details
+            self.logger.info(f"Response status code: {response.status_code}")
+            self.logger.info(f"Response headers: {response.headers}")
+            
+            # Log the raw response content (first 200 chars)
+            content_preview = response.content[:200] if response.content else b"(empty)"
+            self.logger.info(f"Raw response content (first 200 chars): {content_preview}")
+            
             response.raise_for_status()
-            result = response.json()
+            
+            # Check if response has content
+            if not response.content:
+                self.logger.error("Empty response from MediaWiki API")
+                return "ERROR: Empty response from MediaWiki API"
+            
+            # Let's try a simpler approach - just return the raw text for now
+            # This will let us see if the MediaWiki API is actually functioning
+            return f"RAW DEFINITION: {raw_text}"
+            
+            # The code below is commented out until we fix the API issues
+            """
+            try:
+                # Try with requests built-in JSON parser
+                result = response.json()
+            except Exception as json_err:
+                self.logger.error(f"JSON parsing error: {json_err}")
+                self.logger.error(f"Response content: {response.content}")
+                return f"ERROR: Could not parse API response - {str(json_err)}"
             
             # Extract the parsed HTML
             if 'parse' in result and 'text' in result['parse']:
@@ -75,6 +106,7 @@ class WikiProcessor:
             else:
                 self.logger.error(f"Unexpected API response format: {result}")
                 return f"ERROR: Unexpected API response format"
+            """
                 
         except requests.RequestException as e:
             self.logger.error(f"API request error: {e}")
