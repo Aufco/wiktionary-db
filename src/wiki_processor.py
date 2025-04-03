@@ -47,10 +47,8 @@ class WikiProcessor:
         """Attempt to process the definition with MediaWiki"""
         try:
             # Prepare the definition text for processing
-            # Wrap it in a div to ensure proper parsing
             wikitext = f"<div>{raw_text}</div>"
             
-            # Print diagnostic info
             self.logger.info(f"Sending request to MediaWiki API at: {self.api_url}")
             self.logger.info(f"Input wikitext: {wikitext}")
             
@@ -62,7 +60,12 @@ class WikiProcessor:
                     'text': wikitext,
                     'contentmodel': 'wikitext',
                     'format': 'json',
+                    'disablelimitreport': 1,
                     'prop': 'text'
+                },
+                headers={
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 timeout=30
             )
@@ -77,36 +80,52 @@ class WikiProcessor:
             
             response.raise_for_status()
             
-            # Check if response has content
-            if not response.content:
-                self.logger.error("Empty response from MediaWiki API")
-                return "ERROR: Empty response from MediaWiki API"
+            # Try multiple parsing approaches
+            result = None
+            parsing_errors = []
             
-            # Let's try a simpler approach - just return the raw text for now
-            # This will let us see if the MediaWiki API is actually functioning
-            return f"RAW DEFINITION: {raw_text}"
-            
-            # The code below is commented out until we fix the API issues
-            """
+            # Approach 1: Handle UTF-8 BOM
             try:
-                # Try with requests built-in JSON parser
-                result = response.json()
-            except Exception as json_err:
-                self.logger.error(f"JSON parsing error: {json_err}")
-                self.logger.error(f"Response content: {response.content}")
-                return f"ERROR: Could not parse API response - {str(json_err)}"
+                content = response.content.decode('utf-8-sig')
+                result = json.loads(content)
+                self.logger.info("Successfully parsed response with utf-8-sig encoding")
+            except Exception as e:
+                parsing_errors.append(f"UTF-8-sig parsing failed: {str(e)}")
             
-            # Extract the parsed HTML
+            # Approach 2: Standard JSON parsing
+            if result is None:
+                try:
+                    result = response.json()
+                    self.logger.info("Successfully parsed response with standard json()")
+                except Exception as e:
+                    parsing_errors.append(f"Standard JSON parsing failed: {str(e)}")
+            
+            # Approach 3: Try to extract JSON from HTML error response
+            if result is None and b'<' in response.content:
+                try:
+                    # Some error responses might contain HTML
+                    error_text = response.content.decode('utf-8-sig')
+                    self.logger.error(f"Received HTML error response: {error_text[:200]}...")
+                    return f"ERROR: MediaWiki API returned HTML error"
+                except Exception as e:
+                    parsing_errors.append(f"HTML parsing failed: {str(e)}")
+            
+            # If all parsing attempts failed
+            if result is None:
+                error_msg = "; ".join(parsing_errors)
+                self.logger.error(f"All JSON parsing attempts failed. Error: {error_msg}")
+                return f"ERROR: Failed to parse MediaWiki API response - {error_msg}"
+            
+            # Extract the parsed HTML if successful
             if 'parse' in result and 'text' in result['parse']:
                 html = result['parse']['text']['*']
-                
-                # Clean up the HTML to get plain text
                 cleaned_text = self._clean_html(html)
                 return cleaned_text
             else:
-                self.logger.error(f"Unexpected API response format: {result}")
-                return f"ERROR: Unexpected API response format"
-            """
+                # For now, if result doesn't contain parsed text, return raw definition
+                # This helps us see if API is working at all
+                self.logger.warning(f"API response did not contain parsed text: {result}")
+                return f"PROCESSING ERROR - USING RAW: {raw_text}"
                 
         except requests.RequestException as e:
             self.logger.error(f"API request error: {e}")

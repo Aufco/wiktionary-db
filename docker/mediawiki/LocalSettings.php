@@ -30,10 +30,18 @@ $wgMaxPPNodeCount = 1000000;
 $wgMaxTemplateDepth = 100;
 $wgMaxPPExpandDepth = 100;
 
-# Scribunto settings
+# Scribunto settings - FIXED CONFIGURATION
 wfLoadExtension('Scribunto');
 $wgScribuntoDefaultEngine = 'luastandalone';
 $wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
+$wgScribuntoUseGeSHi = true;
+$wgScribuntoUseCodeEditor = true;
+
+# Important API settings - ADDED TO FIX ERRORS
+$wgEnableParserCache = false;
+$wgApiFrameOptions = 'SAMEORIGIN';
+$wgAllowCopy = true;
+$wgParserEnableLegacyMediaDOM = true;
 
 # Debugging
 $wgShowExceptionDetails = true;
@@ -42,3 +50,4 @@ $wgDebugLogFile = "/var/www/html/debug.log";
 
 # Required at the end
 $wgUpgradeKey = "abc123";
+?>

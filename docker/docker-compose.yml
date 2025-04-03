@@ -18,6 +18,7 @@
       - MW_DB_PASS=wikipass
     depends_on:
       - db
+    restart: always
 
   db:
     image: mariadb:latest
@@ -28,6 +29,7 @@
       - MYSQL_ROOT_PASSWORD=root123
     volumes:
       - db_data:/var/lib/mysql
+    restart: always
 
 volumes:
   mediawiki_data:

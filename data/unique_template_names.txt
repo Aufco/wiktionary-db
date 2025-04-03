@@ -1,0 +1,446 @@
+!
+&lit
+'
++obj
+,
+...
+1
+A.D.
+AAVE
+AD
+Anchor
+B.C.
+B.C.E.
+BC
+BCE
+British
+C
+C.
+C.E.
+CE
+Cite book
+City nickname
+Cyrl-def
+EtymOnLine
+IATA
+IPA
+IPAchar
+IPAfont
+IPAlink
+ISBN
+ISSN
+LR
+Latn-def
+PMID
+R:1913
+R:AHD
+R:AHD Idioms
+R:American Heritage Dictionary
+R:BBS
+R:Barrere
+R:Bouvier Law Dictionary
+R:Brave New Words
+R:Brians 2008
+R:Burrill Law Dictionary
+R:CDOE
+R:COED2
+R:Century 1911
+R:Collins
+R:Collins English Dictionary
+R:Concise Oxford 1982
+R:Critical Pronouncing Dictionary
+R:Cummings 2011
+R:DSAE
+R:DSL
+R:Dictionary of Modern Slang
+R:Dictionary.com
+R:DoD
+R:EDD
+R:English Dialect Dictionary
+R:Etymonline
+R:Farmer
+R:GDoS
+R:GNV
+R:Gannett 1905
+R:Gray Botany
+R:Gray SB
+R:Gray SF
+R:Grose 1788
+R:Halliwell Dictionary
+R:Hobson-Jobson
+R:IUPAC-GoldBook
+R:Johnson Dictionary
+R:Knight AMD
+R:Kokugo Dai Jiten
+R:Lexico
+R:Lindley T
+R:MW3 1976
+R:MWO
+R:Macmillan
+R:Merriam Webster Online
+R:Merriam-Webster
+R:Merriam-Webster Online
+R:Mrs Byrne's Dictionary
+R:New English Dictionary
+R:Nordisk leksikografisk
+R:O'Neill 1947
+R:OCD2
+R:ODO
+R:OED Online
+R:OED2
+R:OneLook
+R:Online Etymology Dictionary
+R:Oxford Dictionary of Abbreviations 2011 (online-only)
+R:Partridge
+R:Partridge New
+R:Partridge Underworld
+R:Penguin Abbrev. Dict. 2000
+R:RHCD
+R:Raymond Glossary
+R:SOED
+R:SOED5
+R:Simmonds Trade
+R:The Free Dictionary
+R:Ure DAMM
+R:WebMineral
+R:Webster 1828
+R:Webster 1913
+R:Webster NCD 1967
+R:World Wide Words
+R:Wright
+R:behindthename
+R:en:GDoS
+R:en:Lighter:1972
+R:ga:Ó Dónaill
+RQ:Dunglison Medical Lexicon
+RQ:Landon Ethel Churchill
+RQ:Young Night-Thoughts
+Runr-def
+SI-unit
+SI-unit-2
+SI-unit-abb
+SI-unit-np
+U
+Whatdotheyknow.com
+Wikidata entity link
+a
+abbr of
+abbrev
+abbrev of
+abbreviated
+abbreviation of
+abstain
+acronym
+acronym of
+af
+agent noun of
+aka
+alt
+alt case
+alt case form
+alt case form of
+alt case of
+alt form
+alt form of
+alt sp
+alt sp of
+alt spell
+alt spelling of
+alt typ
+altcase
+alternative case form of
+alternative form  of
+alternative form of
+alternative spelling of
+alternative typography of
+altform
+altsp
+altspell
+anchor
+angbr
+angbr IPA
+ant
+apdx-l
+aphetic form of
+apocopic form of
+arc sp
+archaic form of
+archaic sp
+archaic spelling of
+attention
+attn
+attributive form of
+bor
+c
+cap
+cat
+cens sp
+censored spelling of
+century
+chemf
+circa2
+cite book
+cite-av
+cite-book
+cite-journal
+cite-text
+cite-web
+city nickname
+clip of
+clipping
+clipping of
+cln
+code
+cog
+color panel
+colour panel
+combining form of
+comparative of
+compound
+construed with
+context
+contr
+contr of
+contraction of
+cot
+dated form
+dated form of
+dated sp
+dated spelling of
+datedef
+def-date
+def-unc
+def-uncertain
+defdate
+defdt
+deliberate misspelling of
+demonym-adj
+demonym-noun
+der
+dhub
+diminutive of
+eggcorn of
+ellipsis
+ellipsis of
+elongated form of
+en dash
+en-comparative of
+en-early modern spelling of
+en-proper noun
+en-superlative of
+euph form
+euphemism of
+euphemistic form of
+examples
+eye dialect of
+fa sp
+female equivalent of
+femeq
+feminine equivalent of
+feminine of
+filter-avoidance spelling of
+foreign name
+form of
+formatnum:11000
+former name of
+frac
+g
+gbooks
+genericized trademark
+geochronology
+gerund of
+given name
+gl
+gloss
+glossary
+honor alt case
+hot sense
+i
+ic
+infl of
+inflection of
+informal form of
+informal spelling of
+inh
+init
+init of
+initialism
+initialism of
+italic
+ja-def
+ja-l
+ja-r
+ko-inline
+l
+l-UK-US
+l-lite
+label
+lang
+lb
+lbl
+less common spelling of
+lg
+link
+lit
+ll
+lw
+m
+m+
+m-g
+m-self
+male equivalent of
+masculine noun of
+masculine of
+math
+mdash
+mention
+misconstruction of
+missp
+misspelling  of
+misspelling of
+monospace
+n-g
+n-g-lite
+name translit
+named-after
+nbsp
+ncog
+ndash
+neuter equivalent of
+ng
+ngd
+non-gloss
+non-gloss definition
+nonstandard form of
+nonstandard spelling of
+nowrap
+nstd form
+nstd sp
+nuclide
+obs form
+obs form of
+obs sp
+obs sp of
+obsolete form of
+obsolete spelling of
+obsolete typography of
+only in
+only used in
+oppose
+orth
+overline
+past participle of
+patronymic
+pedia
+pedlink
+person
+phrasal verb
+place
+plural
+plural of
+plural only
+pron sp
+pronunciation spelling of
+pseudo-acronym of
+q
+q-lite
+qf
+qual
+qualifier
+quote-book
+quote-journal
+quote-web
+rare form
+rare form of
+rare sp
+rare spelling of
+refn
+rf-sound example
+rfc-sense
+rfclarify
+rfd-redundant
+rfd-sense
+rfdate
+rfdef
+rfex
+rfm-sense
+rfquote
+rfquote-sense
+rfquotek
+rfref
+rfusex
+rfv-sense
+romanization of
+root
+s
+scrib of
+see
+sense
+senseid
+senseno
+short for
+sic
+sid
+singular of
+slim-wikipedia
+small
+smallcaps
+spelling of
+spoonerism of
+staco
+stand sp
+standard form of
+standard spelling of
+station code
+sub
+suffix
+sumti
+sup
+sup sp
+superlative of
+support
+surname
+swp
+syn
+syn of
+syncopic form of
+syndiff
+synonym of
+synonyms
+taxfmt
+taxlink
+taxlink2
+taxlinknew
+tcl
+tea room sense
+temp
+term-label
+theology
+thub
+timeline:generations/reference
+tl
+tlb
+top
+topic
+topics
+transclude sense
+translation hub
+translation only
+uder
+uncom form
+uncom sp
+uncommon
+uncommon form of
+uncommon spelling of
+unk
+used in phrasal verbs
+ux
+verbal noun of
+vern
+w
+wikipedia
+wp
+zh-l
+zh-m
+{1
+{2
